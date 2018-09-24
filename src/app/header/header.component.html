@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <!--Brand name need to styles to a new look-->
+    <a class="navbar-brand brand-name" routerLink="/">
+      HogarBarber
+    </a>
+    <button class="navbar-toggler" 
+        type="button" 
+        (click)="isCollapsed = !isCollapsed"
+        data-toggle="collapse" 
+        data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        [attr.aria-expanded]="!isCollapsed" 
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse ml-lg-5" 
+      [ngbCollapse]="isCollapsed" 
+      id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}">
+          Home 
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/salons" 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact:true}"
+            >Salons</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link "
+           routerLink="/salons/add-salon"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}">
+            Register
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

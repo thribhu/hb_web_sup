@@ -1,0 +1,40 @@
+.outer-wrapper{
+    display: table !important;
+    width: 100% !important;
+    height: 100% !important;
+    
+}
+.inner-wrapper{
+    display: table-cell !important;
+    vertical-align: middle !important;
+    padding: 15px !important; 
+}
+hr{
+    border: none;
+    height: 1px;
+    color: orange;
+    background-color: orange;
+}
+.radio-inline{
+    padding-top: 40px !important;
+    padding-left: 20px;
+}
+#mainHr{
+    border: none;
+    height: 1px;
+    color: #01a1dd;
+    background-color: #01a1dd;
+}
+
+#ownerDetails{
+    text-justify: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+label{
+    font-size: medium;
+    text-align: center;
+}
+input.inner-wrapper{
+    text-align: center;
+}

@@ -1,0 +1,34 @@
+<form [formGroup]="stylistForm">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="name">StylistName</label>
+      <input type="text" formControlName="stylistName" class="form-control">
+    </div>
+    <div class="form-group col-md-1">
+      <label for="age">Age</label>
+      <input type="number" formControlName="age" class="form-control">
+    </div>
+    <div class="form-group col-md-1">
+        <label for="exp">Experience</label>
+        <input type="number" formControlName="exp" class="form-control">
+      </div>
+  </div>
+    <div class="form-row">
+        <label for="gender" class="col-md-2">Gender</label>
+      <div *ngFor="let gender of gender; let indx = index" class="form-group col-md-1">
+       
+        <input 
+         class='form-control'
+         name='gender'
+         type='radio'
+         [id]='gender'
+         [value]='gender'
+        >
+        <label [for]='gender'>{{gender}}</label>
+        </div>
+    </div>
+    
+    
+    
+  
+</form>

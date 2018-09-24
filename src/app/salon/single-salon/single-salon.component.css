@@ -1,0 +1,36 @@
+
+
+.card {
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
+    transition: 0.3s;
+    border-radius: 5px 5px 0 0;
+}
+
+
+.salon_card {
+   /* color: yellow; */
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 15px;
+    box-shadow: 10px 10px 5px yellow;
+    /* padding: 15px;
+    bottom: 8px; */
+    
+}
+
+.card_salon{
+    background-color: yellow;
+}
+
+.salon_img{
+    height: 150px;
+    width: 200px;
+}
+
+.salon_name {
+    font-family: 'raleway', sans-serif;
+    color: #ff6a1a;
+    font-weight: 300px;
+}

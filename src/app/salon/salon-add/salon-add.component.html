@@ -1,0 +1,144 @@
+
+<!--
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <input formControlName="name" placeholder="Your name">
+
+  <p>Your choosen name: {{ myForm.get('name').value }}</p>
+  <div *ngIf="myForm.get('name').hasError('required')">
+    Oops, please provide a name!
+  </div>
+
+  <input formControlName="email" placeholder="Your email">
+
+  <div *ngIf="myForm.controls.email.hasError('pattern')">
+    Oops, wrong pattern buddy!
+  </div>
+
+  <input formControlName="message" placeholder="Your message">
+
+  <div *ngIf="myForm.controls.message.errors.minlength">
+    Write something longer please!
+  </div>
+  
+  <button type="submit" [disabled]="myForm.invalid">
+    Send
+  </button>
+</form>
+-->
+<!--
+<section class="outer-wrapper" id="register-form">
+  <div class="inner-wrapper">
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-sm-offset-4 col-md-8">
+              <h2 class="text-center">Register with us</h2>
+              <hr id="mainHr">
+              <br>
+              <div class="form-group">
+                <h4 id="ownerDetails">Owner Details</h4>
+                <form [formGroup]="salonRegisterForm" (ngSubmit)="onSubmit(salonRegisterForm.value)">
+                  <div class="form-row">
+                      <div class="form-group">
+                          <label for="salonName">Enter Salon Name:</label>
+                          <input type="text" id=" salonName"class="form-control" formControlName="salonName"placeholder="hogarBarber">
+                      </div>
+                  </div>
+                  
+                  <div class="form-row col-md-4">
+                      <div class="form-group ">
+                          <label for="ownerName">Owner Name:</label>
+                          <input type="text" 
+                          id="ownerName" 
+                          placeholder="Ram Singh Agarwal"
+                           class="form-control"
+                           fomrControlName="ownerName">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <label for="pwnerEmailAddress">Email</label>
+                          <input type="text"
+                           placeholder="ramsingh_agarwal@example.com"
+                            class="form-control" 
+                            id="ownerEmailAddress"
+                            formControlName="email">
+                        </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="dob">Date of Birth</label>
+                      <input type="date" placeholder="month/date/year"
+                       class="form-control"
+                        id="dob"
+                        formControlName="dob">
+                      </div>
+                      <div class="radio" *ngFor="let gender of genders"> 
+                        <label>
+                          <input type="radio" [value]="gender">{{gender}}
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label for="contactNumber">Primary Number</label>
+                        <input type="tel" class="form-control" formControlName="primaryNumber" placeholder="9876980053">
+                      </div>
+                  </div>
+                  <hr>
+                  <br>
+                  <h4 id="ownerDetails">
+                    Salon Details
+                  </h4>
+                  <div class="form-row">
+                    <div class="form-group col">
+                        <label for="salonStartYear">Salon Start Date</label>
+                        <input type="date" class="form-control"  formControlName="salonStartDate" id="salonStartYear">
+                    </div>
+                    <div class="form-group col">
+                        <label for="noOfStylists">Stylists Working</label>
+                        <input type="number" formControlName="stylistsWorking" min="1"class="form-control">
+                    </div>
+                    <div class="form-group col">
+                      <label for="noOfChairs">Chairs in Salons</label>
+                      <input type="number" formControlName="chairsInSalons" min="1" class="form-control">
+                    </div>
+                  </div>
+                  <button  class=" btn btn-primary" type="submit" disabled="!salonRegisterForm.valid">Submit</button>
+                </form>
+              </div>
+              <p>formStatus: {{salonRegisterForm.status}}</p>
+              <p>formValid: {{salonRegisterForm.value}}</p>
+            </div>
+          </div>
+        </div>
+  </div>
+</section>
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="salonRegisterForm" (ngSubmit)="onSubmit(salonRegisterForm)">
+        <div class="form-group">
+          <label for="salonNam">
+            Salon Name
+          </label>
+          <input type="text"
+           class="form-control" 
+           id="salonName"
+           formControlName="salonName">
+           <p>form Value: {{salonRegisterForm.value | json}}</p>
+           <p>form status: {{salonRegisterForm.status| json}}</p>
+        </div>
+        <div class="form-group">
+          <label for="ownerName">Owner Name</label>
+          <input type="text" 
+          class="form-control"
+           id="ownerName"
+           placeholder="Enter Owner's name"
+           formControlName="ownerName"
+           >
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="salonRegisterForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
