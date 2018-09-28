@@ -9,7 +9,7 @@ import { SalonAddComponent } from './salon/salon-add/salon-add.component';
 import { AppRoutionModule } from './appRouting.module';
 import { SalonModelService } from './shared/salon-model.service';
 import { SalonHomeComponent } from './salon-home/salon-home.component';
-import { BannerComponent } from './banner/banner.component';
+
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { SingleSalonComponent } from './salon/single-salon/single-salon.component';
 import { HomeContentComponent } from './home-content/home-content.component';
@@ -19,8 +19,10 @@ import { StylistFormComponent } from './stylist-form/stylist-form.component';
 import { PlaceServiceService } from './place-service.service';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
-
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule,  } from '@angular/material';
+import { Ng2FileSizeModule} from 'ng2-file-size';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     SalonListComponent,
     SalonAddComponent,
     SalonHomeComponent,
-    BannerComponent,
+    
     RegisterFormComponent,
     SingleSalonComponent,
     HomeContentComponent,
@@ -42,18 +44,20 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     NgbModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-    // ReactiveFormsModule
     /*AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCS7i5ElQObZEMGEVjotUsoyPoBtvgclk0',
       libraries: ['places']
     })*/
+    MatCheckboxModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    Ng2FileSizeModule
 
   ],
   providers: [SalonModelService, PlaceServiceService],

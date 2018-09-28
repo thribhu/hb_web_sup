@@ -1,3 +1,228 @@
-<p>
-  register-form works!
-</p>
+<!-- <div class="container col-md-8">
+  <h2>Hola! Come join our family and lets make some wonders</h2>
+  <form [formGroup] = "newSalonApplicationForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="form-group col-md-6">
+        <h3>lets us know about you Business</h3>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6" *ngFor ="let c of opetrationTypes">
+            <!-- <label for="businessName">Business Name</label>
+            <input type="text" class="form-control" id="businessName" formControlName="businessName" placeholder="" autocomplete="off" autocorrect="off" spellcheck="false"> 
+            <li>{{c}}</li>
+        </div>
+      </div>
+      
+    </div>
+
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="inputEmail4">Name</label>
+              <input type="text" class="form-control" id="inputEmail4" formControlName="name" placeholder="Venue Name" >
+            </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Website</label>
+          <input type="text" class="form-control" id="inputEmail4" formControlName="website" placeholder="website url">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Capacity</label>
+          <select class="custom-select custom-select-sm" formControlName="capacity">
+              <option selected>Open this select menu</option>
+              <option value="1" ><200</option>
+              <option value="2" >200-300</option>
+              <option value="3" >300-500</option>
+              <option value="3" >above 500</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Amenities</label>
+            <input type="text" class="form-control" id="inputEmail4" formControlName="amenities" placeholder="Amenities">
+          </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" formControlName="line1" placeholder="1234 Main St">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" formControlName="line1" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" formControlName="city" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">State</label>
+          <input type="text" class="form-control" formControlName="state" id="inputState">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Zip</label>
+          <input type="text" class="form-control" formControlName="zip" id="inputZip">
+        </div>
+      </div>
+       <! <button type="submit" class="btn btn-primary" [disabled]="!venuApplicationForm.valid" (click)="onSubmit()">Add Venue</button>
+     <button type="submit" class="btn btn-primary">Add Venue</button> 
+     <button class="btn btn-primary" type="submit" [disabled]="!venuApplicationForm.valid">Submit</button>
+    </form>
+  </div>⏎           -->
+
+  <!-- businss register form -->
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+        <h2 class="display-4 center">Hola, Come join our family!</h2>
+        <br><br>
+        <div class="container">
+          <div class="col-md-8 row ">
+              <form [formGroup] = "businessRegisterForm" (ngSubmit)="onSubmit()">
+                  <h4>Business Details</h4>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <!-- <label for="businessName">Business Name</label> -->
+                        <input type="text" class="form-control" placeholder="Business Name" #businessName>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="businessStartDate">Business Start Date</label>
+                        <input type="date"  name="businessStartDate" id="businessStartDate" class="form-control" placeholder="Business start date">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group" >
+                      <div class="row">
+                        <div class="col">
+                          <!-- <label for="businessName">Business Name</label> -->
+                          <!-- <label for="businessOperationType">Select your category</label> -->
+                            <select class=" custom-select mb-2 mr-sm-2 mb-sm-0" id="businessType" >
+                              <option value="0">--Select Category--</option>
+                              <option *ngFor="let type of operationTypes" value="{{type}}">{{type}}</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div>
+                    <br><br>
+                    <h4>Add Your Address Here</h4>
+                    <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <!-- <label for="businessName">Business Name</label> -->
+                        <input type="text" class="form-control" id="streetAddress" placeholder="Street">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <!-- <label for="businessName">Business Name</label> -->
+                          <input type="text" class="form-control" id="city" placeholder="City">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                          <div class="col">
+                            <!-- <label for="businessName">Business Name</label> -->
+                            <input type="text" class="form-control" id="state" placeholder="State">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                            <div class="col">
+                              <!-- <label for="businessName">Business Name</label> -->
+                              <input type="text" class="form-control" id="pincode" placeholder="Pincode">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <!-- <label for="businessName">Business Name</label> -->
+                                <input type="file" class="form-control-file" id="streetAddress" placeholder="Address File" accept="image/x-png, image/gif, image/jpeg">
+                              </div>
+                              <div class="col-md-1">
+                                <span><img src="/assets/location_53876-25530.png" alt="location" width="25px" height="25px" (click)="onClickLocation()"></span>
+                              </div>
+                              <div class="col"><sub>Please allow us to get your location.</sub></div>
+                            </div>
+                          </div>
+                        <br><br>
+                        <h4>Owner Details</h4>                    
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col">
+                              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                              <div class="col">
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                              </div>
+                            </div>
+                          </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col">
+                              <input type="number" class="form-control" id="ownerAge" placeholder="age" min="0">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="gender" class="label-inline">Gender: </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i class="fas fa-male"></i></label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2"><i class="fas fa-female"></i></label>
+                          </div>
+                        </div>
+                          <div class="form-group">
+                              <div class="row">
+                                <div class="col">
+                                  <select name="businessExperience" id="businessExperience">
+                                    <option value="0">--Select Your Experience--</option>
+                                    <option *ngFor="let exp of businessExperience"value={{exp}}>{{exp}}</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          <div class="form-group">
+                              <div class="row">
+                                <div class="col">
+                                  <input type="text" class="form-control" id="ownerContact" placeholder="Owner Contact Number">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                  <div class="col">
+                                    <label for="UploadIdForm">Upload Id Proof</label>
+                                  <input type="file" class="form-control-file form-check-inline" name="UploadIdForm" id="UploadIdForm" accept="image/x-png, image/gif, image/jpeg" >
+                                </div>
+                                <div class="col">
+                                    <label for="businessOwnerImageUpload">Upload Your image</label>
+                                  <input type="file" class="form-control-file form-check-inline" name="businessOwnerImageUpload" id="businessOwnerImageUpload" accept="image/x-png, image/gif, image/jpeg" >
+                                  </div>
+                              </div>
+                              </div>
+
+                </form>
+          </div>
+          
+        </div>
+      </div>
+     
+  </div>
+</div>

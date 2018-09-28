@@ -1,0 +1,11 @@
+input [type='file'] {
+    color: transparent;
+}
+
+.form-check-inline > * {
+    margin:5px 3px;
+ }
+
+ .label-inline {
+     margin: 5px 3px;
+ }
